@@ -1,0 +1,20 @@
+{
+  "param":
+  {
+    "local_server": "true",
+    "local_uri": "mysql+pymysql://root:@localhost/codingthunder",
+    "prod_uri": "mysql+pymysql://root:@localhost/codingthunder",
+    "fb_url": "https://facebook.com/Shubham_Mishra",
+    "tw_url": "https://twitter.com/Shubham_Mishra",
+    "gh_url": "https://github.com/codingthunder",
+    "blog_name": "New@Tech",
+    "gmail-user":"hishubham72@gmail.com",
+    "gmail-pass":"Enter your Password",
+    "login_image": "login_img.jpg",
+    "about_text": "Hi my name is Shubham and I create technology related posts and It will be interesting to know more about technology",
+    "admin_user": "shubham",
+    "admin_pass": "mishra",
+    "no_of_posts": 2,
+    "upload_location":"C:\\Users\\HI_HUBHAM\\PycharmProjects\\flask"
+  }
+}

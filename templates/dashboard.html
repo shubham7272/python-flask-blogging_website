@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(' {{url_for('static',filename='img/dashboard.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Welcome to admin section</h1>
+            <span class="subheading">welcome</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+   <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+	   <h1>Add Post</h1>
+	  <a href="/edit/0"><button>Add a new post</button></a>
+	   <a href="/logout"><button>Logout</button></a>
+	 
+	 <hr>
+	 <h1> Upload a file</h1>
+	 <form action="/uploader" method ="post" enctype="multipart/form-data">
+	 <input type="file" name="file1"><br><br>
+	 <button type="submit">Submit</button>
+	 </form>
+	 
+	 
+	  
+	  <hr>
+	  <h1>Edit Post</h1>
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>SNO.</th>
+        <th>TITLE</th>
+        <th>TAGLINE</th>
+		 <th>DATE</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+	  {% for post in post %}
+      <tr>
+        <td>{{post.SNO}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.tagline}}</td>
+		<td>{{post.date}}</td>
+		<td><a href="/edit/{{post.SNO}}"><button>EDIT</button></a></td>
+		<td><a href="/delete/{{post.SNO}}"><button>DELETE</button></a></td>
+      </tr>
+	  {% endfor %}
+      
+    </tbody>
+  </table>
+  
+{% endblock %}
+ 
